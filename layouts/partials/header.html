@@ -35,6 +35,12 @@
             </a>
         {{ end }}
         
+        {{ if .Site.Params.gitlab }}
+            <a href="{{ .Site.Params.gitlab }}" target="_blank">
+                <i class="icon ion-pull-request"></i>
+            </a>
+        {{ end }}
+
         {{ if .Site.Params.twitter }}
             <a href="{{ .Site.Params.twitter }}" target="_blank">
                 <i class="icon ion-social-twitter"></i>
