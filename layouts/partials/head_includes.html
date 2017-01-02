@@ -14,13 +14,25 @@
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/paraiso-light.min.css">
 {{ end }}
 
+
+{{ if .Site.Params.cachebuster }}
+{{ $t := .Now.Unix }}
+<link rel="stylesheet" href="/css/reset.css?t={{$t}}">
+<link rel="stylesheet" href="/css/pygments.css?t={{$t}}">
+<link rel="stylesheet" href="/css/main.css?t={{$t}}">
+{{range .Site.Params.extracssfiles}}
+    <link rel="stylesheet" href="{{.}}?t={{$t}}">
+{{ end }}
+
+{{ else }}
+
 <link rel="stylesheet" href="/css/reset.css">
 <link rel="stylesheet" href="/css/pygments.css">
 <link rel="stylesheet" href="/css/main.css">
-
 {{range .Site.Params.extracssfiles}}
     <link rel="stylesheet" href="{{.}}">
 {{end}}
+{{ end }}
 
 <!-- Icon -->
 <link rel="shortcut icon"
