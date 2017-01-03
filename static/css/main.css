@@ -126,6 +126,12 @@ section.icons {
   -ms-order: 1;
   order: 1;
 }
+section.footer {
+  -webkit-order: 3;
+  -moz-order: 3;
+  -ms-order: 3;
+  order: 3;
+}
 section.main {
   -webkit-order: 2;
   -moz-order: 2;
@@ -144,6 +150,12 @@ section.main {
     -moz-order: 2;
     -ms-order: 2;
     order: 2;
+  }
+  section.footer {
+    -webkit-order: 3;
+    -moz-order: 3;
+    -ms-order: 3;
+    order: 3;
   }
   section.main {
     -webkit-order: 1;
