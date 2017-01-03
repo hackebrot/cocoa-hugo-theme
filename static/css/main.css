@@ -278,6 +278,9 @@ section.header nav ul li:hover {
     color: #333333;
   }
 }
+section.footer .content {
+  font-size: 14px;
+}
 section.icons {
   background-color: #f7f7f7;
 }
