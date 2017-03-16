@@ -5,7 +5,7 @@
 
 <body lang="{{ .Site.Params.lang }}">
 
-<section class="header"> 
+<section class="header">
     <div class="container">
         <div class="content">
             {{ if .Site.Params.gravatar }}
@@ -30,37 +30,37 @@
         <div class="content">
 
         {{ if .Site.Params.github }}
-            <a href="{{ .Site.Params.github }}" target="_blank">
+            <a href="{{ .Site.Params.github }}" target="_blank" rel="noopener">
                 <i class="icon ion-social-github"></i>
             </a>
         {{ end }}
-        
+
         {{ if .Site.Params.gitlab }}
-            <a href="{{ .Site.Params.gitlab }}" target="_blank">
+            <a href="{{ .Site.Params.gitlab }}" target="_blank" rel="noopener">
                 <i class="icon ion-pull-request"></i>
             </a>
         {{ end }}
 
         {{ if .Site.Params.twitter }}
-            <a href="{{ .Site.Params.twitter }}" target="_blank">
+            <a href="{{ .Site.Params.twitter }}" target="_blank" rel="noopener">
                 <i class="icon ion-social-twitter"></i>
             </a>
         {{ end }}
 
         {{ if .Site.Params.linkedin }}
-            <a href="{{ .Site.Params.linkedin }}" target="_blank">
+            <a href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener">
                 <i class="icon ion-social-linkedin"></i>
             </a>
         {{ end }}
 
         {{ if .Site.Params.facebook }}
-            <a href="{{ .Site.Params.facebook }}" target="_blank">
+            <a href="{{ .Site.Params.facebook }}" target="_blank" rel="noopener">
                 <i class="icon ion-social-facebook larger"></i>
             </a>
         {{ end }}
 
         {{ if .Site.Params.soundcloud }}
-            <a href="{{ .Site.Params.soundcloud }}" target="_blank">
+            <a href="{{ .Site.Params.soundcloud }}" target="_blank" rel="noopener">
                 <i class="icon ion-ios-musical-notes larger"></i>
             </a>
         {{ end }}
