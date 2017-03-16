@@ -11,6 +11,13 @@
                 <div class="meta">
                     <div class="date" title="{{ .Date.Format .Site.Params.dateformfull }}">{{ .Date.Format .Site.Params.dateform }}</div>
                     <div class="reading-time"><div class="middot"></div>{{ if eq 1 .ReadingTime }}{{ .ReadingTime }} minute read{{ else }}{{ .ReadingTime }} minutes read{{ end }}</div>
+                    {{ if .Params.tags }}
+                        <div class="tags"><div class="middot"></div>
+                        {{ range $index, $tag := .Params.tags }}{{ if gt $index 0 }} {{ end }}
+                        <a href="{{ "/tags/" | relURL }}{{ . | urlize }}">#{{ . }}</a>
+                        {{ end }}
+                        </div>
+                    {{ end }}
                 </div>
             </div>
             <div class="markdown">
