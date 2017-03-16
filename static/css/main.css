@@ -424,6 +424,9 @@ section.main .content .front-matter .word-count,
 section.main .content .front-matter .reading-time .middot {
   display: none;
 }
+section.main .content .front-matter .tags .middot {
+  display: none;
+}
 section.main .content .front-matter .middot {
   font-size: 6px;
   margin: 0 6px;
@@ -437,6 +440,9 @@ section.main .content .front-matter .middot:before {
   section.main .content .front-matter .date,
   section.main .content .front-matter .word-count,
   section.main .content .front-matter .reading-time .middot {
+    display: initial;
+  }
+  section.main .content .front-matter .tags .middot {
     display: initial;
   }
   section.main .content .title-container .initials {
