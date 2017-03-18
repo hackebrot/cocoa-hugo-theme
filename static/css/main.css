@@ -419,10 +419,8 @@ section.main .content .front-matter .meta {
   display: flex;
   margin-bottom: 32px;
 }
-section.main .content .front-matter .date,
 section.main .content .front-matter .word-count,
-section.main .content .front-matter .reading-time .middot,
-section.main .content .front-matter .tags .middot {
+section.main .content .front-matter .reading-time {
   display: none;
 }
 section.main .content .front-matter .middot {
