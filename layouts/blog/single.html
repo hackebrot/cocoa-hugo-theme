@@ -9,8 +9,16 @@
                     <div class="initials"><a href="{{ .Site.BaseURL }}">{{ .Site.Params.Initials }}</a></div>
                 </div>
                 <div class="meta">
+                    {{ if and .Site.Params.dateformfull .Site.Params.dateform }}
                     <div class="date" title="{{ .Date.Format .Site.Params.dateformfull }}">{{ .Date.Format .Site.Params.dateform }}</div>
+                    {{ else }}
+                    <div class="date" title='{{ .Date.Format "Mon Jan 2 2006 15:04:05 MST" }}'>{{ .Date.Format "Jan 2, 2006" }}</div>
+                    {{ end }}
+
+                    {{ if not .Site.Params.noshowreadtime }}
                     <div class="reading-time"><div class="middot"></div>{{ if eq 1 .ReadingTime }}{{ .ReadingTime }} minute read{{ else }}{{ .ReadingTime }} minutes read{{ end }}</div>
+                    {{ end }}
+
                     {{ if .Params.tags }}
                         <div class="tags"><div class="middot"></div>
                         {{- range $index, $tag := .Params.tags }}{{ if gt $index 0 }} {{ end -}}
@@ -23,7 +31,7 @@
             <div class="markdown">
                 {{ .Content }}
                 <br>
-                <p><a href="/blog/">Back to posts</a></p>
+		<p><a href="/blog/">{{ i18n "backToPosts" }}</a></p>
             </div>
             <br>
             <div class="disqus">

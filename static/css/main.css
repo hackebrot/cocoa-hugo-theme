@@ -1,12 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
-@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400italic,700,700italic);
-@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
-@import url(https://fonts.googleapis.com/css?family=Raleway:500);
 .dark {
-  color: #333333 !important;
+  color: #333 !important;
 }
 .light {
-  color: #666666 !important;
+  color: #666 !important;
 }
 .accent {
   color: #428bca !important;
@@ -61,7 +57,7 @@ body {
   min-height: 100%;
   font-weight: 400;
   font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
-  color: #111111;
+  color: #111;
   line-height: 1.6;
   text-rendering: optimizeLegibility !important;
 }
@@ -75,9 +71,6 @@ body {
   .non-narrow.zero-top-spacing {
     padding-top: 0 !important;
   }
-}
-.icon {
-  text-rendering: geometricPrecision !important;
 }
 section {
   display: -webkit-flex;
@@ -192,8 +185,8 @@ section.header .content {
   -ms-align-items: center;
   align-items: center;
 }
-section.header .container .content .avatar {
-  border-radius: 60px;
+section.header .avatar {
+  border-radius: 50%;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
   max-width: 50px;
 }
@@ -201,13 +194,26 @@ section.header .name {
   font-size: 18px;
   font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
   letter-spacing: -0.005rem;
-  text-transform: uppercase;
   font-weight: 700;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  color: #333333;
-  color: #555555;
+  color: #333;
+  text-transform: uppercase;
+  color: #555;
+}
+section.header h3.self-intro {
+  font-size: 1em;
+  font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
+  letter-spacing: -0.005rem;
+  font-weight: 700;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  color: #333;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 1rem;
 }
 section.header nav {
   font-size: 14px;
@@ -224,26 +230,26 @@ section.header nav ul {
   display: -ms-inline-flex;
   display: inline-flex;
 }
-section.header nav ul a {
+section.header nav ul li {
   margin-left: 6px;
   margin-right: 6px;
 }
-section.header nav ul a:first-child {
+section.header nav ul li:first-child {
   margin-left: 0;
 }
-section.header nav ul a:last-child {
+section.header nav ul li:last-child {
   margin-right: 0;
 }
-section.header nav ul li {
-  color: #555555;
+section.header nav ul a {
+  color: #555;
   font-weight: 500;
   -webkit-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
   -moz-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
   -ms-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
   -o-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
 }
-section.header nav ul li:hover {
-  color: #111111;
+section.header nav ul a:hover {
+  color: #111;
 }
 @media (min-width: 600px) {
   section.header {
@@ -262,7 +268,7 @@ section.header nav ul li:hover {
     align-items: flex-start;
   }
   section.header .name {
-    color: #333333;
+    color: #333;
   }
   section.header nav {
     font-size: 14px;
@@ -271,11 +277,11 @@ section.header nav ul li:hover {
   section.header nav ul {
     text-align: left;
   }
-  section.header nav ul li {
-    color: #666666;
+  section.header nav ul a {
+    color: #666;
   }
-  section.header nav ul li:hover {
-    color: #333333;
+  section.header nav ul a:hover {
+    color: #333;
   }
 }
 section.footer .content {
@@ -300,11 +306,11 @@ section.icons .content {
 section.icons .content a {
   margin-left: 6px;
   margin-right: 6px;
-  color: #555555;
-  -webkit-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-  -moz-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-  -ms-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-  -o-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  opacity: 0.6;
+  -webkit-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -moz-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -ms-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -o-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
 }
 section.icons .content a:first-child {
   margin-left: 0;
@@ -313,13 +319,14 @@ section.icons .content a:last-child {
   margin-right: 0;
 }
 section.icons .content a:hover {
-  color: #111111;
+  opacity: 0.8;
 }
 section.icons .content a .icon {
-  font-size: 20px;
+  width: 16px;
+  height: 16px;
 }
-section.icons .content a .icon.larger {
-  font-size: 22px;
+section.icons .content a .flag {
+  border-radius: 50%;
 }
 @media (min-width: 600px) {
   section.icons {
@@ -334,16 +341,6 @@ section.icons .content a .icon.larger {
   section.icons .content a {
     margin-left: 3px;
     margin-right: 3px;
-    color: #666666;
-  }
-  section.icons .content a:hover {
-    color: #333333;
-  }
-  section.icons .content a .icon {
-    font-size: 18px;
-  }
-  section.icons .content a .icon.larger {
-    font-size: 20px;
   }
 }
 section.main .container {
@@ -357,7 +354,7 @@ section.main .container {
   justify-content: flex-start;
 }
 section.main .content {
-  color: #111111;
+  color: #111;
   font-size: 16px;
 }
 section.main .content .title-container {
@@ -376,42 +373,41 @@ section.main .content .title-container .initials {
   font-size: 18px;
   font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
   letter-spacing: -0.005rem;
-  text-transform: uppercase;
   font-weight: 700;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  color: #333333;
-  color: #666666;
+  color: #333;
+  text-transform: uppercase;
+  color: #666;
 }
 section.main .content .title-container .initials a {
-  color: #666666;
+  color: #666;
   -webkit-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
   -moz-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
   -ms-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
   -o-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
 }
 section.main .content .title-container .initials a:hover {
-  color: #333333;
+  color: #333;
 }
 section.main .content .page-heading {
   font-size: 18px;
   font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
   letter-spacing: -0.005rem;
-  text-transform: uppercase;
   font-weight: 700;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  color: #333333;
+  color: #333;
+  text-transform: uppercase;
   margin-bottom: 16px;
 }
 section.main .content .front-matter .page-heading {
   margin-bottom: 0;
 }
 section.main .content .front-matter .meta {
-  font-size: 14px;
-  color: #666666;
+  color: #666;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
@@ -508,12 +504,29 @@ section.main .container .content .post-item {
   list-style: disc inside;
 }
 section.main .container .content .post-item .meta {
-  font-size: 14px;
-  color: #666666;
+  color: #666;
   display: none;
   min-width: 100px;
   text-align: right;
   margin-right: 16px;
+}
+section.main .container .content .no-bullet {
+  color: transparent;
+  font-style: oblique;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+section.main .container .content .no-bullet .date {
+  font-size: 18px;
+  font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
+  letter-spacing: -0.005rem;
+  font-weight: 700;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  color: #333;
+  color: #666 !important;
+  font-style: normal;
 }
 section {
   padding: 0 16px;
@@ -589,7 +602,7 @@ img.profile {
   }
 }
 .page-heading a {
-  color: #333333;
+  color: #333;
 }
 section.main .content .markdown h1,
 section.main .content .markdown h2,
@@ -604,7 +617,7 @@ section.main .content .markdown h6 {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  color: #333333;
+  color: #333;
   text-transform: none;
   margin-top: 1.75rem;
 }
@@ -617,7 +630,7 @@ section.main .content .markdown h2 {
   margin-bottom: 1.5rem;
 }
 section.main .content .markdown h3 {
-  font-size: 1em;
+  font-size: 1rem;
   margin-bottom: 1rem;
 }
 section.main .content .markdown h4,
