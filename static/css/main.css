@@ -636,7 +636,7 @@ section.main .content .markdown h5,
 section.main .content .markdown h6 {
   font-size: 1rem;
   margin-bottom: 1rem;
-  letter-spacing: none;
+  letter-spacing: 0;
 }
 section.main .content .markdown code,
 section.main .content .markdown pre {
