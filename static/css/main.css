@@ -218,27 +218,24 @@ section.header h3.self-intro {
 section.header nav {
   font-size: 14px;
   margin-bottom: 16px;
+  margin-left: -6px;
+  margin-right: -6px;
   text-transform: uppercase;
   font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
 }
 section.header nav ul {
   list-style: none;
   text-align: center;
-  display: -webkit-inline-flex;
-  display: -moz-inline-flex;
-  display: -ms-inline-flexbox;
-  display: -ms-inline-flex;
-  display: inline-flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
 }
 section.header nav ul li {
   margin-left: 6px;
   margin-right: 6px;
-}
-section.header nav ul li:first-child {
-  margin-left: 0;
-}
-section.header nav ul li:last-child {
-  margin-right: 0;
 }
 section.header nav ul a {
   color: #555;
