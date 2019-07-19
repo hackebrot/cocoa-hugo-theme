@@ -16,11 +16,11 @@
                     {{ end }}
 
                     {{ if not .Site.Params.noshowreadtime }}
-                    <div class="reading-time"><div class="middot"></div>{{ if eq 1 .ReadingTime }}{{ .ReadingTime }} minute read{{ else }}{{ .ReadingTime }} minutes read{{ end }}</div>
+                    <div class="reading-time">{{ if eq 1 .ReadingTime }}{{ .ReadingTime }} minute read{{ else }}{{ .ReadingTime }} minutes read{{ end }}</div>
                     {{ end }}
 
                     {{ if .Params.tags }}
-                        <div class="tags"><div class="middot"></div>
+                        <div class="tags">
                         {{- range $index, $tag := .Params.tags }}{{ if gt $index 0 }} {{ end -}}
                         <a href="{{ "/tags/" | relURL }}{{ . | urlize }}">#{{ . }}</a>
                         {{ end }}
