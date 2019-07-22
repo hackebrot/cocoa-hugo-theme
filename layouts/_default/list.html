@@ -9,9 +9,9 @@
             {{ with .Data.Pages }}
             <nav class="section-items">
                 <ul>
-                {{ range .ByPublishDate }}
-                {{ partial "li.html" . }}
-                {{ end }}
+                    {{ range .ByPublishDate.Reverse }}
+                    {{ partial "li.html" . }}
+                    {{ end }}
                 </ul>
             </nav>
             {{ end }}
