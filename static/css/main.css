@@ -576,11 +576,11 @@ a:hover {
 img {
   max-width: 100%;
 }
-img.profile {
+img[src$="bc.jpg"]{
   min-width: 100%;
 }
 @media (min-width: 600px) {
-  img.profile {
+  img[src$="bc.jpg"]{
     min-width: 300px;
     max-width: 300px !important;
   }
