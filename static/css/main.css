@@ -581,8 +581,11 @@ img[src$="bc.jpg"]{
 }
 @media (min-width: 600px) {
   img[src$="bc.jpg"]{
-    min-width: 300px;
+    float: right;
+    margin-left: 1rem !important;
+    margin-top: 0 !important;
     max-width: 300px !important;
+    min-width: 300px;
   }
 }
 .page-heading a {
